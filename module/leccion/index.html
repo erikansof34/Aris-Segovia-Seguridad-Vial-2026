@@ -62,10 +62,10 @@
 </head>
 
 <body class="sf-scroll-y-hidden body-style" id="darkStyleImgSeccion">
-    <input id='course_code' value="<?= $course_code;?>" hidden>
-    <input id='module_id' value="<?= $module_id;?>" hidden>
-    <input id='unique_course_id' value="<?= $unique_course_id ;?>" hidden>
-    <input id='emp_unique_id' value="<?= $emp_unique_id ;?>" hidden>
+    <input id='course_code' value="0" data-php="<?= $course_code;?>" hidden>
+    <input id='module_id' value="0" data-php="<?= $module_id;?>" hidden>
+    <input id='unique_course_id' value="0" data-php="<?= $unique_course_id ;?>" hidden>
+    <input id='emp_unique_id' value="0" data-php="<?= $emp_unique_id ;?>" hidden>
     <!-- Header con el logo -->
     <header class="header">
         <div class="contentHeader bg-header-r">
@@ -159,26 +159,26 @@
         <hr>
         <ul>
             <a href="../../index.html">
-                <!-- <a href="./../index.php?course_code=<?= $course_code; ?>"> -->
+                <!-- <a href="./../index.html"> -->
                 <li><i class="fas fa-caret-right"></i> Presentación</li>
             </a>
             <a href="./index.html" class="act">
-                <!-- <a href="./index.php?course_code=<?= $course_code; ?>"> -->
+                <!-- <a href="./index.html"> -->
                 <li><i class="fas fa-caret-right"></i> Contenido</li>
             </a>
             <a href="../evaluacion/quiz.html">
-                <!-- <a href="../evaluacion/quiz.php?course_code=<?= $course_code; ?>"> -->
+                <!-- <a href="../evaluacion/quiz.html"> -->
                 <li><i class="fas fa-caret-right"></i> Evaluación</li>
             </a>
         </ul>
         <hr>
         <ul>
             <!-- <a href="index.html"> -->
-            <a href="../../../../../login.php">
+            <a href="../../../../../login.html">
                 <li><i class="fas fa-caret-right"></i> Mis cursos</li>
             </a>
             <!-- <a href="modulo.html"> -->
-            <a href="../../../../../logout.php">
+            <a href="../../../../../logout.html">
                 <li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
             </a>
         </ul>

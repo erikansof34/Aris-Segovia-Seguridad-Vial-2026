@@ -83,8 +83,8 @@
             <div class="headerOpc">
                 <i class="fas fa-times"></i>
                 <br>
-                <!-- <h1>Hola! <b><?= $fullname; ?></b></h1> -->
-                <h1>Hola! <b>Nombre user</b></h1>
+                <h1>Hola! <b><?= $fullname; ?></b></h1>
+<!-- <h1>Hola! <b>Nombre user</b> --></h1>
                 <h5>Bienvenido a su Ruta de Aprendizaje!</h5>
                 <div class="headerProg">
                     <p>
@@ -95,26 +95,26 @@
                 <hr>
                 <ul>
                     <a href="../../index.html">
-                        <!-- <a href="../../index.php?course_code=<?= $course_code; ?>"> -->
+                        <!-- <a href="../../index.html"> -->
                         <li><i class="fas fa-caret-right"></i> Presentación</li>
                     </a>
                     <a href="../leccion/index.html">
-                        <!-- <a href="../leccion/index.php?course_code=<?= $course_code; ?>"> -->
+                        <!-- <a href="../leccion/index.html"> -->
                         <li><i class="fas fa-caret-right"></i> Contenido</li>
                     </a>
                     <a href="../evaluacion/quiz.html" class="act">
-                        <!-- <a href="../evaluacion/quiz.php?course_code=<?= $course_code; ?>" class="act"> -->
+                        <!-- <a href="../evaluacion/quiz.html" class="act"> -->
                         <li><i class="fas fa-caret-right"></i> Evaluación</li>
                     </a>
                 </ul>
                 <hr>
                 <ul>
-                    <a href="../../../../../login..html">
-                        <!-- <a href="../../../../../login.php"> -->
+                    <a href="../../../../../login.html">
+                        <!-- <a href="../../../../../login.html"> -->
                         <li><i class="fas fa-caret-right"></i> Mis cursos</li>
                     </a>
                     <a href="../../../../../logout.html">
-                        <!-- <a href="../../../../../logout.php"> -->
+                        <!-- <a href="../../../../../logout.html"> -->
                         <li><i class="fas fa-caret-right"></i> Cerrar sesión</li>
                     </a>
                 </ul>
@@ -169,7 +169,7 @@
     <script>
         function btnPrev() {
             const path = location.pathname.split("/").slice(0, -1).join("/");
-            // window.location.href = "../leccion/index.php?course_code=<?= $course_code; ?>";
+            // window.location.href = "../leccion/index.html";
             window.location.href = "../leccion/index.html";
         };
 
