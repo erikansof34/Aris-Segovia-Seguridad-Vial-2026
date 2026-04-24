@@ -1,0 +1,207 @@
+<!-- <?php  
+   // $CI = require('../../ci_instance.php'); 
+   require('../../../functions_helpers.php'); /*load helper*/ 
+   check_session(); /* Comprobar la sesión activa*/ 
+   $course_code        = $_GET['course_code'];  /* recibir el código del curso */ 
+   $unique_course_id   = check_permission_employee_course($course_code); /* Comprobar si el empleado tiene acceso al curso*/ 
+   $CI->load->model('training/evaluation_model'); 
+   $modules            = $CI->evaluation_model->get_read_progress_user($unique_course_id, [], [$CI->session->userdata('employee_data')['user_id']]); 
+   //$modules            = get_course_modules($course_code); 
+ 	$extension_url      = "?course_code=".$course_code; 
+    
+   foreach ($modules as $key => $module) { 
+ 		# code... 
+ 		$module_info = get_module_image_description($key + 1); 
+ 		//echo $key + 1; 
+ 		switch($key + 1) { 
+ 			case 1: $url = "inicio.php?course_code=".$course_code; break; 
+ 		} 
+    }   
+ 	$url .= $extension_url . "&module=".__my_simple_crypt__($module['module_id'], 'e'); 
+   $extension_url = "?course_code=".$course_code; /* variable url para pasar el código del curso*/ 
+ ?> -->
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seguridad Vial - Conductores</title>
+    <!-- <title><?= $module['category_name'] ?></title> -->
+    <link rel="icon" type="image/x-icon" href="./assets/img/aris-favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="./plugins/css/sofactia.css">
+
+    <!-- Librerías CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <!-- Librería JavaScript -->
+    <script src="plugins/libs/jquery-3.3.1.js" defer></script>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="./plugins/css/inicio.css" type="text/css">
+    <link rel="stylesheet" href="./plugins/libs/component/slider/slider-component.css" type="text/css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700">
+
+</head>
+
+<body>
+    <!-- Parallax Section -->
+    <section class="parallax-container">
+        <!-- Fondo de imagen para fallback/mobile -->
+        <div class="fd"></div>
+
+        <!-- Background Video con Parallax -->
+        <div class="parallax-bg" id="parallax-bg">
+            <video id="iniVideo" autoplay muted loop class="ken-burns">
+                <source src="./assets/video/miningprocess.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+
+        <!-- Contenido -->
+        <div class="parallax-content">
+            <!-- Logo central -->
+            <div class="parallax-icon">
+                <img src="./assets/img/logoW.png" alt="Logo Aris Mining" class="parallax-logo">
+            </div>
+
+            <h1 class="parallax-title">Módulo<br> <strong>Seguridad Vial</strong></h1>
+
+            <h1 class="parallax-subtitle">
+                Conductores
+            </h1>
+
+            <div class="parallax-buttons">
+                <a href="#contenido" class="parallax-btn inicio-btn button-icon-effect button-icon-flip-x">
+                    <i class="fas fa-arrow-down"></i>
+                    Iniciar
+                </a>
+            </div>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 15.5l-6-6h12l-6 6z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Contenido adicional para demostrar el parallax -->
+    <section id="contenido">
+        <div class="text-center">
+
+            <div class="flex-container">
+                <img src="./assets/img/Logo-aris-zeroo.png" alt="Logo Sofactia" class="parallax-logo">
+                <h1 class="sf-txt-1xl text-center sf-blue">Información del curso</h1>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider-content">
+                    <div class="slider-single">
+                        <div class="course-box_inst">
+                            <div class="header_inst">
+                                <div class="icon-container_inst">
+                                    <i class="fas fa-clock icon_inst"></i>
+                                </div>
+                                <h2>Duración del Curso</h2>
+                            </div>
+                            <div class="content_inst">
+                                <p>Tiempo máximo estimado de duración virtual: <span>1 hora</span></p>
+                                <p>Tiempo asociado a su perfil de formación: <span>4 horas</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-single" data-regla="1">
+                        <div class="course-box_inst">
+                            <div class="header_inst">
+                                <div class="icon-container_inst">
+                                    <i class="fas fa-bullseye icon_inst"></i>
+                                </div>
+                                <h2>Este curso le permitirá:</h2>
+                            </div>
+                            <div class="content_inst">
+                                <p>Acceder a nuestra operación con el conocimiento necesario para ayudarnos a cuidar su salud y prevenir accidentes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-single" data-regla="2">
+                        <div class="course-box_inst">
+                            <div class="header_inst">
+                                <div class="icon-container_inst">
+                                    <i class="fas fa-check icon_inst"></i>
+                                </div>
+                                <h2>Al finalizar usted podrá:</h2>
+                            </div>
+                            <div class="content_inst">
+                                <p><i class="fas fa-hand-point-right"></i> Reconocer las políticas de seguridad que buscan cuidarte en la operación.</p>
+                                <p><i class="fas fa-hand-point-right"></i> Identificar y controlar los principales riesgos de nuestra operación.</p>
+                                <p><i class="fas fa-hand-point-right"></i> Conocer el procedimiento y canales para reportar un accidente.</p>
+                            </div>
+                        </div>
+                        <h2 class="tituloh1-center slider-single-title"></h2>
+
+                    </div>
+
+                    <div class="slider-single" data-regla="3">
+                        <div class="course-box_inst">
+                            <div class="header_inst">
+                                <div class="icon-container_inst">
+                                    <i class="fas fa-thumbs-up icon_inst"></i>
+                                </div>
+                                <h2>Recomendaciones</h2>
+                            </div>
+                            <div class="content_inst_reco">
+                                <p><i class="fas fa-lightbulb"></i> Disponerse a adquirir nuevos conocimientos y reforzar los existentes para su seguridad.</p>
+                                <p><i class="fas fa-clock"></i> Disponer el tiempo mínimo estimado de duración para tomar este curso.</p>
+                                <p><i class="fas fa-wifi"></i> Contar con conexión a internet.</p>
+                                <p><i class="fas fa-clipboard-check"></i> Realizar todas las actividades de refuerzo y repetirlas si es necesario.</p>
+                                <p><i class="fas fa-signature"></i> No olvides firmar tu compromiso y presentar la Evaluación del curso.</p>
+                                <p><i class="fas fa-headphones"></i> Si estás en un lugar abierto, usa AUDÍFONOS, hay audios con información valiosa que no te querrás perder.</p>
+                            </div>
+                        </div>
+                        <h2 class="tituloh1-center slider-single-title"></h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-container">
+                <a href="module/leccion/index.html?course_code=<?= $course_code; ?>"
+                    class="parallax-btn inicio-btn mt-4 button-icon-effect button-icon-flip-x">
+                    <i class="fas fa-arrow-right"></i>
+                    Siguiente
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="./plugins/libs/component/slider/slider-component.js"></script>
+    <script src="./plugins/libs/component/parallax.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            // Activar el primer tab
+            if (typeof changeTab === 'function') {
+                changeTab(1);
+            } else {
+                setTimeout(function () {
+                    if (typeof changeTab === 'function') {
+                        changeTab(1);
+                    }
+                }, 100);
+            }
+
+            // Reiniciar solo el índice del slider
+            localStorage.setItem('cursoProgreso', JSON.stringify({
+                currentIndex: 0,
+                timestamp: new Date().toISOString()
+            }));
+        });
+    </script>
+</body>
+
+</html>

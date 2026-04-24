@@ -1,0 +1,39 @@
+.header .contentHeader>div:nth-child(1)>div {
+    border-left: 1px solid #ddd;
+}
+
+.header .contentHeader>div:nth-child(1)>div:first-child {
+    border-left: none;
+}
+
+.al {
+    height: 80%;
+}
+
+.al2 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* web */
+.audio-completo {
+    width: 80% !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.audio-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .audio-completo {
+        width: 100% !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+} 

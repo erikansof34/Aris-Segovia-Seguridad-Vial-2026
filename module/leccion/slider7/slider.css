@@ -1,0 +1,41 @@
+figure.effect-layla{
+  border-radius: 3%;
+}
+
+figure.effect-layla h2 {
+    padding-top: 0;
+    position: absolute;
+    /* -webkit-transition: -webkit-transform 0.35s; */
+    transition: transform 0.3s;
+    /* color: #fff; */
+    bottom: 12.5%;
+    width: 75%;
+    left: 12.5%;
+}
+
+/* Hover y clic con colores según el nth-child */
+figure.effect-layla.cl-1  {
+  background: linear-gradient(360deg, #5DFF00, #FFF400);
+}
+
+figure.effect-layla.cl-2 {
+  background: linear-gradient(360deg, #00C1FF, #43FF94);
+}
+
+figure.effect-layla.cl-3 {
+  background: linear-gradient(360deg, #FABC00, #FFED00);
+}
+
+figure.effect-layla.cl-4 {
+  background: linear-gradient(360deg, #8E43FF, #3B346D);
+}
+
+figure.effect-layla.cl-5 {
+  background: linear-gradient(360deg, #8E43FF, #FF4971);
+}
+
+
+figure.effect-layla:hover h2 {
+    background: #fff;
+    /* color: #fff; */
+}

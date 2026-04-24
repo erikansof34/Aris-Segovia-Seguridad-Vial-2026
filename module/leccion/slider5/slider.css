@@ -1,0 +1,111 @@
+/* Estilos para el slider 5 - PESV */
+.contenido-central {
+    text-align: center;
+    padding: 20px;
+}
+
+.audio-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedores de elementos interactivos */
+.elementos-container, .elementos-container-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 950px; /* Max width increased for wider cards */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.elemento {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--blue25, #badde1);
+    border-radius: 12px;
+    padding: 20px; /* Increased padding */
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    min-height: 150px; /* Slightly taller for wider presence */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.elemento:hover {
+    background: var(--blue25, #badde1);
+    color: #003a5d;
+    transform: translateY(-5px);
+}
+
+.imagen-objetivo-tool {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.elemento:hover .imagen-objetivo-tool {
+    filter: none;
+}
+
+/* Info oculta que se muestra al hover */
+.elemento .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #badde1;
+    color: #003a5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+}
+
+.elemento:hover .info {
+    opacity: 1;
+}
+
+.info.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .info.web {
+        display: none;
+    }
+    .info.mobile {
+        display: flex;
+    }
+    .elementos-container, .elementos-container-1 {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px;
+        padding: 0 15px;
+    }
+    .elemento {
+        min-height: 120px;
+    }
+    .audio-completo{
+    width: 100% !important;
+    }
+}
+
+.audio-completo{
+ width: 80% !important;
+}

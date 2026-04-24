@@ -1,1 +1,1 @@
-# Aris-Segovia-Seguridad-Vial-2026
+# Aris-Riesgo-Electrico
